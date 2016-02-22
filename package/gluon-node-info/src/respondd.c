@@ -125,10 +125,6 @@ static struct json_object * respondd_provider_nodeinfo(void) {
 		if (location)
 			json_object_object_add(ret, "location", location);
 
-		struct json_object *owner = get_owner(ctx, p);
-		if (owner)
-			json_object_object_add(ret, "owner", owner);
-
 		json_object_object_add(ret, "system", get_system(ctx, p));
 	}
 
